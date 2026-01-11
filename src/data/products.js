@@ -113,3 +113,48 @@ export const products = [
     ]
   }
 ];
+
+export const comments = [
+  {
+    id: 1,
+    author: "Emily R.",
+    avatar: "https://randomuser.me/api/portraits/women/68.jpg",
+    rating: 5,
+    text: "This fragrance is absolutely stunning. It feels fresh, clean, and sophisticated at the same time. I get compliments every time I wear it, and it lasts for hours without being overpowering."
+  },
+  {
+    id: 2,
+    author: "Michael T.",
+    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+    rating: 4,
+    text: "A very pleasant scent that works great for daily use. It is light enough for the office but still has a noticeable character. I only wish it lasted a little longer."
+  },
+  {
+    id: 3,
+    author: "Sophia L.",
+    avatar: "https://randomuser.me/api/portraits/women/12.jpg",
+    rating: 5,
+    text: "I was looking for something fresh and elegant, and this perfume delivered exactly that. It smells clean, airy, and slightly floral — perfect for warm weather."
+  },
+  {
+    id: 4,
+    author: "Daniel K.",
+    avatar: "https://randomuser.me/api/portraits/men/75.jpg",
+    rating: 3,
+    text: "The fragrance is nice and refreshing, but it is a bit too subtle for my taste. I prefer something more intense, but for people who like light scents, this is a good choice."
+  },
+  {
+    id: 5,
+    author: "Olivia M.",
+    avatar: "https://randomuser.me/api/portraits/women/45.jpg",
+    rating: 4,
+    text: "Very clean and modern smell. It feels premium and well-balanced. I usually wear it during the day, and it gives me a fresh and confident feeling."
+  },
+  {
+    id: 6,
+    author: "James P.",
+    avatar: "https://randomuser.me/api/portraits/men/19.jpg",
+    rating: 5,
+    text: "One of the best fragrances I have tried this year. It is refreshing, elegant, and long-lasting. Definitely something I would buy again and recommend to others."
+  }
+];
