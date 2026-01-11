@@ -1,1 +1,60 @@
 @import "tailwindcss";
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}
+
+:root {
+  --bg-primary: #f7f6f4;
+  --bg-secondary: #ffffff;
+  --bg-soft: #eceae7;
+
+  --text-primary: #1c1c1c;
+  --text-secondary: #6b6b6b;
+  --text-muted: #9a9a9a;
+
+  --brand-primary: #7b5c43;
+  --brand-accent: #c1a27e;
+
+  --border-color: #dedbd6;
+  --card-bg: #ffffff;
+
+  --success: #5f8d75;
+  --error: #b35c5c;
+}
+
+html.dark {
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #171717;
+  --bg-soft: #1f1f1f;
+
+  --text-primary: #f5f5f5;
+  --text-secondary: #b5b5b5;
+  --text-muted: #7a7a7a;
+
+  --brand-primary: #d1b18a;
+  --brand-accent: #a8865f;
+
+  --border-color: #2a2a2a;
+  --card-bg: #1a1a1a;
+
+  --success: #7fb59a;
+  --error: #d07a7a;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
