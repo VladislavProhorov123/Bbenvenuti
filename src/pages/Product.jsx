@@ -13,6 +13,7 @@ export default function Product() {
       <h3 className="text-lg font-semibold">{product.title}</h3>
       <p className="text-[var(--text-secondary)]">{product.brand}</p>
       <p className="text-[var(--brand-primary)] font-bold">${product.price}</p>
+      
     </div>
   );
 }
