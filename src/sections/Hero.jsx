@@ -9,7 +9,7 @@ export default function Hero() {
     navigate('/products')
   }
   return (
-    <section className="relative w-full h-[calc(100vh-96px)]  flex items-center bg-[var(--bg-primary)] mb-[80px]">
+    <section className="relative w-full h-[calc(100vh-96px)]  flex items-center bg-[var(--bg-primary)] ">
       <img
         src={heroImg}
         alt="Perfume Hero"

@@ -1,62 +1,44 @@
 export const products = [
   {
     id: 1,
-    title: "Dior Sauvage",
-    brand: "Dior",
+    title: "Velvet Oud",
     price: 120,
-    volume: "100ml",
-    gender: "male",
-    notes: ["bergamot", "pepper", "ambroxan"],
-    image: "/assets/sauvage.jpg",
-    description:
-      "Fresh and spicy fragrance with notes of bergamot and ambroxan. A modern classic for confident men.",
+    image:
+      "https://images.unsplash.com/photo-1585386959984-a41552231693?q=80&w=800",
   },
   {
     id: 2,
-    title: "Chanel Bleu de Chanel",
-    brand: "Chanel",
-    price: 135,
-    volume: "100ml",
-    gender: "male",
-    notes: ["citrus", "ginger", "incense"],
-    image: "/assets/bleu.jpg",
-    description:
-      "Elegant and timeless scent with woody and citrus accords. Perfect for everyday wear.",
+    title: "Citrus Bloom",
+    price: 95,
+    image:
+      "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=800",
   },
   {
     id: 3,
-    title: "Yves Saint Laurent Y",
-    brand: "YSL",
+    title: "Midnight Rose",
     price: 110,
-    volume: "100ml",
-    gender: "male",
-    notes: ["apple", "sage", "tonka bean"],
-    image: "/assets/ysl-y.jpg",
-    description:
-      "Bold and fresh fragrance with sweet and aromatic notes. Designed for ambitious men.",
+    image:
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=800",
   },
   {
     id: 4,
-    title: "Tom Ford Black Orchid",
-    brand: "Tom Ford",
-    price: 150,
-    volume: "50ml",
-    gender: "unisex",
-    notes: ["black truffle", "ylang-ylang", "dark chocolate"],
-    image: "/assets/black-orchid.jpg",
-    description:
-      "Luxurious and sensual fragrance with dark and rich accords. A statement perfume.",
+    title: "Santal Noir",
+    price: 130,
+    image:
+      "https://images.unsplash.com/photo-1591375372226-3531cf2eb6c3?q=80&w=800",
   },
   {
     id: 5,
-    title: "Maison Francis Kurkdjian Baccarat Rouge 540",
-    brand: "MFK",
-    price: 300,
-    volume: "70ml",
-    gender: "unisex",
-    notes: ["saffron", "amberwood", "cedar"],
-    image: "/assets/baccarat.jpg",
-    description:
-      "Iconic niche fragrance with sweet, woody and amber notes. Extremely long-lasting.",
+    title: "Amber Sky",
+    price: 105,
+    image:
+      "https://images.unsplash.com/photo-1610465299993-e6675c9f9efa?q=80&w=800",
+  },
+  {
+    id: 6,
+    title: "White Musk",
+    price: 90,
+    image:
+      "https://images.unsplash.com/photo-1610465299993-e6675c9f9efa?q=80&w=800",
   },
 ];
