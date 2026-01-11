@@ -34,7 +34,7 @@ export default function ContactForm() {
         </div>
 
         {/* Правый блок: форма */}
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/2 sm:w-full">
           <form
             onSubmit={handleSubmit}
             className="flex flex-col gap-6 bg-[var(--bg-soft)] p-8 rounded-xl shadow-lg"
