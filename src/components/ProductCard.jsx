@@ -5,7 +5,6 @@ export default function ProductCard({ product }) {
   return (
     <Link to={`/product/${product.id}`}>
       <div className="group w-[300px] h-[340px] bg-[var(--card-bg)] border border-[var(--border-color)] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
-        {/* Изображение */}
         <div className="h-60 w-full overflow-hidden">
           <img
             src={product.image}
@@ -14,7 +13,6 @@ export default function ProductCard({ product }) {
           />
         </div>
 
-        {/* Текст */}
         <div className="flex flex-col flex-1 p-4 justify-between">
           <h3 className="mt-2 text-lg font-semibold text-[var(--text-primary)] truncate">
             {product.title}

@@ -13,7 +13,7 @@ export default function Product() {
     <section className="py-24">
       <div className="container max-w-6xl mx-auto grid grid-cols-2 gap-16">
         {/* IMAGE */}
-        <div className="bg-[var(--bg-soft)] rounded-2xl p-10 flex items-center justify-center">
+        <div className="bg-[var(--bg-soft)] rounded-2xl  flex items-center justify-center ">
           <img
             src={product.image}
             alt={product.title}

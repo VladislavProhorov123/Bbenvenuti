@@ -1,35 +1,36 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom';
-import SectionTitle from '../components/SectionTitle';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import SectionTitle from "../components/SectionTitle";
+import parfume4 from "../assets/parfume4.jpg";
+import parfume19 from "../assets/parfume19.jpg";
+import parfume20 from "../assets/parfume20.jpg";
+import parfume21 from "../assets/parfume21.jpg";
+
 
 export default function Collections() {
   const collections = [
-  {
-    id: 1,
-    title: "Fresh & Citrus",
-    image:
-      "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=1200",
-  },
-  {
-    id: 2,
-    title: "Woody & Spicy",
-    image:
-      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=1200",
-  },
-  {
-    id: 3,
-    title: "For Her",
-    image:
-      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=1200",
-  },
-  {
-    id: 4,
-    title: "For Him",
-    image:
-      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=1200",
-  },
-];
-  const navigate = useNavigate()
+    {
+      id: 1,
+      title: "Fresh & Citrus",
+      image: parfume19,
+    },
+    {
+      id: 2,
+      title: "Woody & Spicy",
+      image: parfume21,
+    },
+    {
+      id: 3,
+      title: "For Her",
+      image: parfume4,
+    },
+    {
+      id: 4,
+      title: "For Him",
+      image: parfume20,
+    },
+  ];
+  const navigate = useNavigate();
   return (
     <section className="py-24 bg-[var(--bg-primary)]">
       <div className="container">
@@ -57,9 +58,7 @@ export default function Collections() {
 
               {/* Text */}
               <div className="relative z-10 h-full flex flex-col justify-end p-8">
-                <h3 className="text-3xl font-serif text-white">
-                  {item.title}
-                </h3>
+                <h3 className="text-3xl font-serif text-white">{item.title}</h3>
 
                 <span className="mt-4 inline-block text-sm text-white/80 uppercase tracking-wider">
                   Shop collection →
@@ -70,6 +69,5 @@ export default function Collections() {
         </div>
       </div>
     </section>
-
-  )
+  );
 }
