@@ -13,7 +13,7 @@ export default function FeaturedProducts() {
   const navigate = useNavigate();
 
   return (
-    <section className="py-24 bg-[var(--bg-secondary)] relative">
+    <section className="py-16 md:py-24 bg-[var(--bg-secondary)] relative">
       <div className="container">
         <SectionTitle
           title="Featured Fragrances"
@@ -21,7 +21,7 @@ export default function FeaturedProducts() {
         />
 
         <Swiper
-          className="w-[1280px]"
+          className="w-full px-4 md:px-0"
           modules={[Navigation, Autoplay]}
           navigation={{
             prevEl: ".custom-prev",
@@ -30,9 +30,9 @@ export default function FeaturedProducts() {
           autoplay={{ delay: 5000, disableOnInteraction: false }}
           slidesPerView={4}
           breakpoints={{
-            320: { slidesPerView: 1.2 },
-            768: { slidesPerView: 2.2 },
-            1024: { slidesPerView: 4 },
+            320: { slidesPerView: 1, spaceBetween: 16 },
+            768: { slidesPerView: 2, spaceBetween: 20 },
+            1024: { slidesPerView: 4, spaceBetween: 24 },
           }}
         >
           {products.map((product) => (
@@ -42,18 +42,17 @@ export default function FeaturedProducts() {
           ))}
         </Swiper>
 
-        <button className="custom-prev absolute left-[50px] top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[var(--brand-primary)] text-white flex items-center justify-center shadow-lg hover:bg-[var(--brand-accent)] transition-transform duration-300 hover:scale-110 cursor-pointer">
-            ‹
-          </button>
-          <button className="custom-next absolute right-[70px] top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[var(--brand-primary)] text-white flex items-center justify-center shadow-lg hover:bg-[var(--brand-accent)] transition-transform duration-300 hover:scale-110">
-            ›
-          </button>
-
+        <button className="custom-prev hidden md:flex absolute left-4 lg:left-12 top-1/2 -translate-y-1/2 z-20 w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-[var(--brand-primary)] text-white items-center justify-center shadow-lg hover:bg-[var(--brand-accent)] transition-transform duration-300 hover:scale-110">
+          ‹
+        </button>
+        <button className="custom-next hidden md:flex absolute right-4 lg:right-12 top-1/2 -translate-y-1/2 z-20 w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-[var(--brand-primary)] text-white items-center justify-center shadow-lg hover:bg-[var(--brand-accent)] transition-transform duration-300 hover:scale-110">
+          ›
+        </button>
 
         <div className="flex justify-center mt-14">
           <button
             onClick={() => navigate("/products")}
-            className="px-10 py-3 rounded-full bg-[var(--brand-primary)] hover:bg-[var(--brand-accent)] text-white font-semibold transition cursor-pointer"
+            className="w-full sm:w-auto px-8 md:px-10 py-3 rounded-full bg-[var(--brand-primary)] hover:bg-[var(--brand-accent)] text-white font-semibold transition cursor-pointer"
           >
             Shop Now
           </button>

@@ -32,35 +32,32 @@ export default function Collections() {
   ];
   const navigate = useNavigate();
   return (
-    <section className="py-24 bg-[var(--bg-primary)]">
+    <section className="py-16 md:py-24 bg-[var(--bg-primary)]">
       <div className="container">
         <SectionTitle
           title="Our Collections"
           subtitle="Carefully curated fragrances for every mood and personality."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 md:gap-8">
           {collections.map((item) => (
             <div
               key={item.id}
               onClick={() => navigate("/products")}
-              className="group relative h-[360px] rounded-xl overflow-hidden cursor-pointer"
+              className="group relative h-[240px] sm:h-[280px] md:h-[360px] rounded-xl overflow-hidden cursor-pointer"
             >
-              {/* Image */}
               <img
                 src={item.image}
                 alt={item.title}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
 
-              {/* Dark overlay */}
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition" />
 
-              {/* Text */}
-              <div className="relative z-10 h-full flex flex-col justify-end p-8">
-                <h3 className="text-3xl font-serif text-white">{item.title}</h3>
+              <div className="relative z-10 h-full flex flex-col justify-end p-4 sm:p-6 md:p-8">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-serif text-white">{item.title}</h3>
 
-                <span className="mt-4 inline-block text-sm text-white/80 uppercase tracking-wider">
+                <span className="mt-2 md:mt-4 inline-block text-xs sm:text-sm text-white/80 uppercase tracking-wider">
                   Shop collection →
                 </span>
               </div>
