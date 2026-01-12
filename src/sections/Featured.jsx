@@ -28,7 +28,7 @@ export default function FeaturedProducts() {
             nextEl: ".custom-next",
           }}
           autoplay={{ delay: 5000, disableOnInteraction: false }}
-          slidesPerView={3}
+          slidesPerView={4}
           breakpoints={{
             320: { slidesPerView: 1.2 },
             768: { slidesPerView: 2.2 },

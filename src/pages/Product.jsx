@@ -68,7 +68,7 @@ export default function Product() {
       </div>
 
       {/* Reviews */}
-      <div className="container max-w-6xl mx-auto mt-24">
+      <div className="container max-w-6xl mx-auto mt-24 mb-12">
         <h2 className="text-2xl font-serif mb-12 text-center">
           Customer Reviews
         </h2>

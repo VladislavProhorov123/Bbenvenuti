@@ -3,17 +3,42 @@ import SectionTitle from "../components/SectionTitle";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Временно просто логируем данные
-    console.log({ name, email });
+    const payload = {
+      name,
+      phone,
+      message,
+      date: new Date().toLocaleString(),
+    };
 
-    // Тут можно добавить отправку на API / Telegram bot
-    setName("");
-    setEmail("");
+    try {
+      const res = await fetch(
+        "https://api.sheetbest.com/sheets/b6d0c161-701f-4764-ab93-0bf9414b6086",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        }
+      );
+
+      if (!res.ok) {
+        throw new Error("Failed to send");
+      }
+
+      setName("");
+      setPhone("");
+      setMessage("");
+      alert("Your message has been sent");
+    } catch (err) {
+      alert("Error sending form. Please try again.");
+    }
   };
 
   return (
@@ -28,8 +53,8 @@ export default function ContactForm() {
           <p className="mt-6 text-[var(--text-secondary)]">
             By subscribing to our newsletter, you’ll receive personalized
             recommendations, early access to new collections, and curated
-            content about the art of perfumery. Your email is safe with us –
-            we never share your information with third parties.
+            content about the art of perfumery. Your email is safe with us – we
+            never share your information with third parties.
           </p>
         </div>
 
@@ -55,23 +80,37 @@ export default function ContactForm() {
             </div>
 
             <div className="flex flex-col">
-              <label htmlFor="email" className="mb-2 font-medium">
-                Email
+              <label htmlFor="phone" className="mb-2 font-medium">
+                Phone
               </label>
               <input
-                id="email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@example.com"
+                id="phone"
+                type="tel"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                placeholder="+1 234 567 890"
                 required
                 className="border border-[var(--border-color)] rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] transition"
               />
             </div>
 
+            <div className="flex flex-col">
+              <label htmlFor="message" className="mb-2 font-medium">
+                Comment
+              </label>
+              <textarea
+                id="message"
+                rows={4}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                placeholder="Your message..."
+                className="border border-[var(--border-color)] rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] transition resize-none"
+              />
+            </div>
+
             <button
               type="submit"
-              className="mt-4 px-8 py-3 rounded-full bg-[var(--brand-primary)] hover:bg-[var(--brand-accent)] text-white font-semibold transition w-full"
+              className="mt-4 px-8 py-3 rounded-full bg-[var(--brand-primary)] hover:bg-[var(--brand-accent)] text-white font-semibold transition w-full cursor-pointer"
             >
               Subscribe
             </button>
@@ -79,6 +118,5 @@ export default function ContactForm() {
         </div>
       </div>
     </section>
-
   );
 }
