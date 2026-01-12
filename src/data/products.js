@@ -1,3 +1,12 @@
+import parfume13 from '../assets/parfume13.png'
+import parfume14 from '../assets/parfume14.png'
+import parfume15 from '../assets/parfume15.png'
+import parfume16 from '../assets/parfume16.png'
+import parfume17 from '../assets/parfume17.png'
+import parfume18 from '../assets/parfume18.png'
+
+
+
 export const products = [
   {
     id: 1,
@@ -6,8 +15,7 @@ export const products = [
     price: 120,
     ml: 100,
     rating: 4.8,
-    image:
-      "https://images.unsplash.com/photo-1585386959984-a41552231693?q=80&w=800",
+    image: parfume13,
     description:
       "A deep and luxurious oud fragrance blended with warm spices and smooth vanilla.",
     notes: ["Oud", "Vanilla", "Amber", "Saffron"],
@@ -25,8 +33,7 @@ export const products = [
     price: 95,
     ml: 75,
     rating: 4.5,
-    image:
-      "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=800",
+    image: parfume14,
     description:
       "A fresh and vibrant citrus fragrance with soft floral undertones.",
     notes: ["Bergamot", "Orange Blossom", "Jasmine", "Musk"],
@@ -44,8 +51,7 @@ export const products = [
     price: 110,
     ml: 100,
     rating: 4.7,
-    image:
-      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=800",
+    image: parfume15,
     description:
       "A seductive floral fragrance with dark rose and warm woody accents.",
     notes: ["Rose", "Patchouli", "Cedarwood", "Black Pepper"],
@@ -63,8 +69,7 @@ export const products = [
     price: 130,
     ml: 100,
     rating: 4.9,
-    image:
-      "https://images.unsplash.com/photo-1591375372226-3531cf2eb6c3?q=80&w=800",
+    image: parfume16,
     description:
       "A rich and creamy sandalwood fragrance with smoky and spicy notes.",
     notes: ["Sandalwood", "Leather", "Cardamom", "Incense"],
@@ -82,8 +87,7 @@ export const products = [
     price: 105,
     ml: 90,
     rating: 4.6,
-    image:
-      "https://images.unsplash.com/photo-1610465299993-e6675c9f9efa?q=80&w=800",
+    image: parfume17,
     description:
       "A warm amber fragrance with soft sweetness and a touch of spice.",
     notes: ["Amber", "Tonka Bean", "Vanilla", "Cinnamon"],
@@ -101,8 +105,7 @@ export const products = [
     price: 90,
     ml: 75,
     rating: 4.4,
-    image:
-      "https://images.unsplash.com/photo-1610465299993-e6675c9f9efa?q=80&w=800",
+    image: parfume18,
     description:
       "A clean and soft musk fragrance with subtle floral notes.",
     notes: ["White Musk", "Lily", "Cotton Flower", "Soft Woods"],
