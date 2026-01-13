@@ -21,8 +21,8 @@ h3 {
   --text-secondary: #6b6b6b;
   --text-muted: #9a9a9a;
 
-  --brand-primary: #7b5c43;
-  --brand-accent: #c1a27e;
+  --brand-primary: #708238;
+  --brand-accent: #a0a76d;
 
   --border-color: #dedbd6;
   --card-bg: #ffffff;
@@ -40,8 +40,8 @@ html.dark {
   --text-secondary: #b5b5b5;
   --text-muted: #7a7a7a;
 
-  --brand-primary: #d1b18a;
-  --brand-accent: #a8865f;
+  --brand-primary: #a8b35c;
+  --brand-accent: #c1c88a;
 
   --border-color: #2a2a2a;
   --card-bg: #1a1a1a;

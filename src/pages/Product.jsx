@@ -1,17 +1,58 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { comments, products } from "../data/products";
 import { useParams } from "react-router-dom";
 import ContactForm from "../sections/ContactForm";
+import ProductCard from "../components/ProductCard";
 
 export default function Product() {
   const { id } = useParams();
+  const [product, setProduct] = useState(null);
 
-  const product = products.find((p) => p.id === Number(id));
+  useEffect(() => {
+    const found = products.find((p) => p.id === Number(id));
+    setProduct(found);
+    // Скролл наверх при переходе на другой товар
+    window.scrollTo(0, 0);
+  }, [id]);
 
-  if (!product) return <p>Not found</p>;
+  if (!product)
+    return (
+      <section className="min-h-[70svh] flex items-center justify-center bg-[var(--bg-secondary)] px-6">
+        <div className="max-w-xl text-center">
+          <p className="tracking-widest text-sm text-[var(--text-muted)] mb-4">
+            FRAGRANCE NOT FOUND
+          </p>
+
+          <h1 className="text-3xl sm:text-4xl font-serif mb-6">
+            This scent has faded away
+          </h1>
+
+          <p className="text-[var(--text-secondary)] text-sm sm:text-base leading-relaxed">
+            The fragrance you are looking for is no longer available or may
+            never have existed. Like rare perfumes, some things are meant to be
+            fleeting. But our collection is full of extraordinary scents waiting
+            to be discovered.
+          </p>
+
+          <button
+            onClick={() => window.history.back()}
+            className="mt-8 px-8 py-3 rounded-full bg-[var(--brand-primary)] hover:bg-[var(--brand-accent)] text-white font-semibold transition"
+          >
+            Go back
+          </button>
+        </div>
+      </section>
+    );
+
+  // Upsell / похожие товары
+  const relatedProducts = products
+    .filter((p) => p.brand === product.brand && p.id !== product.id)
+    .slice(0, 4);
+
   return (
     <section className="py-24">
       <div className="container max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 px-4 md:px-0">
+        {/* IMAGE */}
         <div className="bg-[var(--bg-soft)] rounded-2xl flex items-center justify-center p-4 md:p-8">
           <img
             src={product.image}
@@ -20,6 +61,7 @@ export default function Product() {
           />
         </div>
 
+        {/* INFO */}
         <div className="text-center lg:text-left">
           <p className="uppercase text-sm tracking-wide text-[var(--text-muted)]">
             {product.brand}
@@ -79,7 +121,6 @@ export default function Product() {
               key={comment.id}
               className="bg-[var(--bg-soft)] border border-[var(--border-color)] rounded-2xl p-4 md:p-6 shadow-sm hover:shadow-md transition"
             >
-              {/* Header */}
               <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
                 <img
                   src={comment.avatar}
@@ -95,7 +136,6 @@ export default function Product() {
                 </div>
               </div>
 
-              {/* Text */}
               <p className="text-[var(--text-secondary)] leading-relaxed text-sm">
                 {comment.text}
               </p>
@@ -103,6 +143,21 @@ export default function Product() {
           ))}
         </div>
       </div>
+
+      {relatedProducts.length > 0 && (
+        <div className="container max-w-6xl mx-auto mt-16 md:mt-24 px-4 md:px-0 mb-8">
+          <h2 className="text-2xl font-serif mb-12 text-center">
+            You may also like
+          </h2>
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+            {relatedProducts.map((p) => (
+              <ProductCard key={p.id} product={p} />
+            ))}
+          </div>
+        </div>
+      )}
+
       <ContactForm />
     </section>
   );
