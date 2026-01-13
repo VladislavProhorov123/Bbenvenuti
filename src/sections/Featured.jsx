@@ -42,10 +42,10 @@ export default function FeaturedProducts() {
           ))}
         </Swiper>
 
-        <button className="custom-prev hidden md:flex absolute left-4 lg:left-12 top-1/2 -translate-y-1/2 z-20 w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-[var(--brand-primary)] text-white items-center justify-center shadow-lg hover:bg-[var(--brand-accent)] transition-transform duration-300 hover:scale-110">
+        <button className="custom-prev hidden md:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-[var(--brand-primary)] text-white items-center justify-center shadow-lg hover:bg-[var(--brand-accent)] transition-transform duration-300 hover:scale-110">
           ‹
         </button>
-        <button className="custom-next hidden md:flex absolute right-4 lg:right-12 top-1/2 -translate-y-1/2 z-20 w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-[var(--brand-primary)] text-white items-center justify-center shadow-lg hover:bg-[var(--brand-accent)] transition-transform duration-300 hover:scale-110">
+        <button className="custom-next hidden md:flex absolute right-4 lg:right-16 top-1/2 -translate-y-1/2 z-20 w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-[var(--brand-primary)] text-white items-center justify-center shadow-lg hover:bg-[var(--brand-accent)] transition-transform duration-300 hover:scale-110">
           ›
         </button>
 

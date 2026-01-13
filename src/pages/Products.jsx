@@ -15,23 +15,20 @@ export default function Products() {
     .sort((a, b) => (sort === "price-asc" ? a.price - b.price : 0));
 
   return (
-    <section className="py-4">
+    <section className="py-6 md:py-10">
       <div className="container">
-        
-
-        {/* Filters */}
-        <div className="flex flex-wrap gap-6 items-center mb-12 bg-[var(--bg-soft)] p-6 rounded-xl">
+        <div className="flex flex-col md:flex-row flex-wrap gap-4 md:gap-6 items-stretch md:items-center mb-8 md:mb-12 bg-[var(--bg-soft)] p-4 md:p-6 rounded-xl">
           <input
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search fragrance..."
-            className="px-4 py-2 rounded-lg border border-[var(--border-color)] bg-[var(--bg-primary)]"
+            className="w-full md:w-auto px-4 py-2 rounded-lg border border-[var(--border-color)] bg-[var(--bg-primary)] text-sm md:text-base"
           />
 
           <select
             value={brand}
             onChange={(e) => setBrand(e.target.value)}
-            className="px-4 py-2 rounded-lg border border-[var(--border-color)] bg-[var(--bg-primary)]"
+            className="w-full md:w-auto px-4 py-2 rounded-lg border border-[var(--border-color)] bg-[var(--bg-primary)] text-sm md:text-base"
           >
             {brands.map((b) => (
               <option key={b} value={b}>
@@ -43,7 +40,7 @@ export default function Products() {
           <select
             value={sort}
             onChange={(e) => setSort(e.target.value)}
-            className="px-4 py-2 rounded-lg border border-[var(--border-color)] bg-[var(--bg-primary)]"
+            className="w-full md:w-auto px-4 py-2 rounded-lg border border-[var(--border-color)] bg-[var(--bg-primary)] text-sm md:text-base"
           >
             <option value="default">Sort by</option>
             <option value="price-asc">Price: Low → High</option>
@@ -51,7 +48,7 @@ export default function Products() {
         </div>
 
         {/* Products */}
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 gap-4 md:gap-6">
           {filteredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

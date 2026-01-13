@@ -5,11 +5,9 @@ import ContactForm from "../sections/ContactForm";
 import parfume11 from "../assets/parfume11.jpg";
 import parfume12 from "../assets/parfume12.jpg";
 
-
-
 export default function AboutUs() {
   return (
-    <section className="py-2 bg-[var(--bg-secondary)]">
+    <section className="py-8 md:py-16 bg-[var(--bg-secondary)]">
       <div className="container max-w-6xl mx-auto">
         <AboutBlock
           title="Our Story"
