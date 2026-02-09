@@ -1,16 +1,43 @@
-# React + Vite
+# Bbenvenuti — Perfume Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Веб-приложение сайта бренда духов.
+Реализован многостраничный сайт с каталогом продукции, информационными страницами и формой обратной связи с отправкой данных в таблицу.
 
-Currently, two official plugins are available:
+Проект учебный, с акцентом на React, роутинг, формы и работу с внешним сервисом.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Страницы
+- Home — главная страница с полной презентацией бренда и продукции
+- Products — список всех духов с фильтрацией
+- About Us — информация о бренде
+- Contact Us — форма обратной связи
 
-## React Compiler
+## Функционал
+- Многостраничная структура через React Router
+- Каталог духов
+- Фильтрация духов
+- Слайдеры с использованием Swiper.js
+- Форма обратной связи
+- Отправка данных формы в Google Sheets через SheetBest
+- Адаптивная верстка
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Технологии
+- React
+- React Router
+- Swiper.js
+- JavaScript
+- CSS
+- SheetBest
+- Vite
 
-## Expanding the ESLint configuration
+## Демо
+https://bbenvenuti.vercel.app/
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Репозиторий
+https://github.com/VladislavProhorov123/Bbenvenuti
+
+## Установка и запуск
+```bash
+git clone https://github.com/VladislavProhorov123/Bbenvenuti.git
+cd Bbenvenuti
+npm install
+npm run dev
