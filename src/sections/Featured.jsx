@@ -8,16 +8,19 @@ import ProductCard from "../components/ProductCard";
 import SectionTitle from "../components/SectionTitle";
 import { useNavigate } from "react-router-dom";
 import { Autoplay, Navigation } from "swiper/modules";
+import { useTranslation } from "react-i18next";
 
 export default function FeaturedProducts() {
+  const { t } = useTranslation();
+
   const navigate = useNavigate();
 
   return (
     <section className="py-16 md:py-24 bg-[var(--bg-secondary)] relative">
       <div className="container">
         <SectionTitle
-          title="Featured Fragrances"
-          subtitle="Our most loved scents, selected for you."
+          title={t("featured.title")}
+          subtitle={t("featured.subtitle")}
         />
 
         <Swiper
@@ -54,7 +57,7 @@ export default function FeaturedProducts() {
             onClick={() => navigate("/products")}
             className="w-full sm:w-auto px-8 md:px-10 py-3 rounded-full bg-[var(--brand-primary)] hover:bg-[var(--brand-accent)] text-white font-semibold transition cursor-pointer"
           >
-            Shop Now
+            {t("featured.shopNow")}
           </button>
         </div>
       </div>

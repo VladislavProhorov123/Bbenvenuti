@@ -5,28 +5,30 @@ import parfume4 from "../assets/parfume4.jpg";
 import parfume19 from "../assets/parfume19.jpg";
 import parfume20 from "../assets/parfume20.jpg";
 import parfume21 from "../assets/parfume21.jpg";
+import { useTranslation } from "react-i18next";
 
 
 export default function Collections() {
+  const { t } = useTranslation()
   const collections = [
     {
       id: 1,
-      title: "Fresh & Citrus",
+      title: t("collections.items.fresh"),
       image: parfume19,
     },
     {
       id: 2,
-      title: "Woody & Spicy",
+      title: t("collections.items.woody"),
       image: parfume21,
     },
     {
       id: 3,
-      title: "For Her",
+      title: t("collections.items.forHer"),
       image: parfume4,
     },
     {
       id: 4,
-      title: "For Him",
+      title: t("collections.items.forHim"),
       image: parfume20,
     },
   ];
@@ -35,8 +37,8 @@ export default function Collections() {
     <section className="py-16 md:py-24 bg-[var(--bg-primary)]">
       <div className="container">
         <SectionTitle
-          title="Our Collections"
-          subtitle="Carefully curated fragrances for every mood and personality."
+          title={t("collections.title")}
+          subtitle={t("collections.subtitle")}
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 md:gap-8">
@@ -58,7 +60,7 @@ export default function Collections() {
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-serif text-white">{item.title}</h3>
 
                 <span className="mt-2 md:mt-4 inline-block text-xs sm:text-sm text-white/80 uppercase tracking-wider">
-                  Shop collection →
+                  {t("collections.button")} 
                 </span>
               </div>
             </div>

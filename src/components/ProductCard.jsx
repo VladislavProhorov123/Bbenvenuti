@@ -1,7 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 export default function ProductCard({ product }) {
+  const { t } = useTranslation()
   return (
     <Link to={`/product/${product.id}`}>
       <div className="group w-[300px] h-[340px] bg-[var(--card-bg)] border border-[var(--border-color)] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
@@ -15,7 +17,7 @@ export default function ProductCard({ product }) {
 
         <div className="flex flex-col flex-1 p-4 justify-between">
           <h3 className="mt-2 text-lg font-semibold text-[var(--text-primary)] truncate">
-            {product.title}
+            {t(product.titleKey)}
           </h3>
           <p className="mt-1 text-[var(--text-secondary)] font-medium">
             ${product.price}

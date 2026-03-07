@@ -1,8 +1,10 @@
 import React from "react";
 import heroImg from "../assets/hero2.png";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
   const handleShopNow = () => {
@@ -20,18 +22,17 @@ export default function Hero() {
 
       <div className="container relative z-10 text-center text-white flex flex-col items-center gap-4 md:gap-6 px-4 md:px-0">
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-playfair font-bold leading-tight">
-          Discover Your Signature Scent
+          {t("hero.title")}
         </h1>
         <p className="text-base sm:text-lg md:text-xl max-w-xl">
-          Explore our curated collection of niche perfumes crafted with passion
-          and luxury.
+          {t("hero.subtitle")}
         </p>
 
         <button
           className="mt-4 md:mt-6 px-6 md:px-8 py-3 rounded-full bg-[var(--brand-primary)] hover:bg-[var(--brand-accent)] text-white font-semibold transition cursor-pointer w-full sm:w-auto"
           onClick={handleShopNow}
         >
-          Shop Now
+          {t("hero.button")}
         </button>
       </div>
     </section>

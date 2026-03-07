@@ -1,8 +1,10 @@
 import { Facebook, Instagram, Twitter } from "lucide-react";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
+  const { t } = useTranslation()
   return (
     <footer className="bg-[var(--bg-secondary)] border-t border-[var(--border-color)] py-12 md:py-16">
       <div className="container max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 px-4 md:px-0 text-center sm:text-left">
@@ -11,14 +13,13 @@ export default function Footer() {
             PERFUME
           </div>
           <p className="mt-3 md:mt-4 text-sm md:text-base text-[var(--text-secondary)] max-w-xs sm:max-w-none">
-            Elevate your senses with our premium fragrances. Discover, indulge,
-            and embrace your signature scent.
+            {t("footer.description")}
           </p>
         </div>
 
         <div className="">
           <h3 className="font-semibold mb-3 md:mb-4 text-sm md:text-base">
-            Navigation
+            {t("footer.navigation")}
           </h3>
           <ul className="flex flex-col gap-2 text-sm md:text-base items-center sm:items-start">
             <li>
@@ -26,7 +27,7 @@ export default function Footer() {
                 to="/"
                 className="hover:text-[var(--brand-primary)] transition"
               >
-                Home
+                {t("footer.home")}
               </Link>
             </li>
             <li>
@@ -34,7 +35,7 @@ export default function Footer() {
                 to="/products"
                 className="hover:text-[var(--brand-primary)] transition"
               >
-                Products
+                {t("footer.products")}
               </Link>
             </li>
             <li>
@@ -42,7 +43,7 @@ export default function Footer() {
                 to="/about"
                 className="hover:text-[var(--brand-primary)] transition"
               >
-                About Us
+                {t("footer.about")}
               </Link>
             </li>
             <li>
@@ -50,13 +51,13 @@ export default function Footer() {
                 to="/contacts"
                 className="hover:text-[var(--brand-primary)] transition"
               >
-                Contact
+                {t("footer.contact")}
               </Link>
             </li>
           </ul>
         </div>
         <div className="">
-          <h3 className="font-semibold mb-3 md:mb-4 text-sm md:text-base">Contact</h3>
+          <h3 className="font-semibold mb-3 md:mb-4 text-sm md:text-base">{t("footer.contactTitle")}</h3>
           <p className="text-[var(--text-secondary)] text-sm md:text-base mt-1">
             info@perfume.com
           </p>
@@ -68,7 +69,7 @@ export default function Footer() {
           </p>
         </div>
         <div>
-          <h3 className="font-semibold mb-3 md:mb-4 text-sm md:text-base">Follow Us</h3>
+          <h3 className="font-semibold mb-3 md:mb-4 text-sm md:text-base">{t("footer.follow")}</h3>
           <div className="flex gap-4 justify-center sm:justify-start">
             <a
               href="#"
@@ -93,7 +94,8 @@ export default function Footer() {
       </div>
 
       <div className="mt-10 md:mt-12 text-center text-[var(--text-secondary)] text-xs md:text-sm px-4">
-        &copy; {new Date().getFullYear()} PERFUME. All rights reserved.
+        &copy; {new Date().getFullYear()} PERFUME. {t("footer.rights")}
+
       </div>
     </footer>
   );

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import LanguageSelect from "../components/LanguageSelect";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const { t } = useTranslation();
   const linkClass = ({ isActive }) =>
     isActive
       ? "text-[var(--brand-primary)] border-b-2 border-[var(--brand-primary)] pb-1 font-semibold transition"
@@ -18,16 +20,16 @@ export default function Header() {
 
         <nav className="hidden md:flex gap-10 text-lg items-center">
           <NavLink to="/" className={linkClass}>
-            Home
+            {t("nav.home")}
           </NavLink>
           <NavLink to="/products" className={linkClass}>
-            Products
+            {t("nav.products")}
           </NavLink>
           <NavLink to="/about" className={linkClass}>
-            About Us
+            {t("nav.about")}
           </NavLink>
           <NavLink to="/contacts" className={linkClass}>
-            Contacts
+            {t("nav.contacts")}
           </NavLink>
           <LanguageSelect />
         </nav>
@@ -57,31 +59,33 @@ export default function Header() {
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ${open ? "max-h-96" : "max-h-0"}`}
       >
-        <div className="flex justify-end"><LanguageSelect /></div>
+        <div className="flex justify-end">
+          <LanguageSelect />
+        </div>
         <nav className="flex flex-col gap-6 p-6 bg-[var(--bg-secondary)]">
           <NavLink onClick={() => setOpen(false)} to="/" className={linkClass}>
-            Home
+            {t("nav.home")}
           </NavLink>
           <NavLink
             onClick={() => setOpen(false)}
             to="/products"
             className={linkClass}
           >
-            Products
+            {t("nav.products")}
           </NavLink>
           <NavLink
             onClick={() => setOpen(false)}
             to="/about"
             className={linkClass}
           >
-            About Us
+            {t("nav.about")}
           </NavLink>
           <NavLink
             onClick={() => setOpen(false)}
             to="/contacts"
             className={linkClass}
           >
-            Contacts
+            {t("nav.contacts")}
           </NavLink>
         </nav>
       </div>

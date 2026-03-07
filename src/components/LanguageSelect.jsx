@@ -1,13 +1,13 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import ua from "../assets/ua.svg";
 import usa from "../assets/usa.svg";
-import { useTranslation } from "react-i18next";
 
 const languages = [
   { code: "en", label: "English", flag: usa },
-  { code: "uk", label: "Українська", flag: ua },
+  { code: "ua", label: "Українська", flag: ua },
 ];
 
 export default function LanguageSelect() {

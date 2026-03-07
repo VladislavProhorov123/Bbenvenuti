@@ -1,3 +1,163 @@
 {
-  "title": "hello"
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About Us",
+    "contacts": "Contacts"
+  },
+  "hero": {
+    "title": "Discover Your Signature Scent",
+    "subtitle": "Explore our curated collection of niche perfumes crafted with passion and luxury.",
+    "button": "Shop Now"
+  },
+  "collections": {
+    "title": "Our Collections",
+    "subtitle": "Carefully curated fragrances for every mood and personality.",
+    "button": "Shop collection →",
+    "items": {
+      "fresh": "Fresh & Citrus",
+      "woody": "Woody & Spicy",
+      "forHer": "For Her",
+      "forHim": "For Him"
+    }
+  },
+  "contact": {
+    "title": "Stay Connected with Us",
+    "subtitle": "Join our fragrance community and get exclusive access to limited edition scents, special offers, and insider tips from our master perfumers. Sign up now to elevate your olfactory experience and never miss a new release or promotion.",
+    "description": "By subscribing to our newsletter, you’ll receive personalized recommendations, early access to new collections, and curated content about the art of perfumery. Your email is safe with us – we never share your information with third parties.",
+    "form": {
+      "name": "Name",
+      "phone": "Phone",
+      "comment": "Comment",
+      "namePlaceholder": "Your Name",
+      "phonePlaceholder": "+1 234 567 890",
+      "commentPlaceholder": "Your message...",
+      "submit": "Subscribe",
+      "success": "Your message has been sent",
+      "error": "Error sending form. Please try again."
+    }
+  },
+  "notFound": {
+    "error": "ERROR 404",
+    "title": "This fragrance could not be found",
+    "description": "The page you are looking for has vanished into the mist of rare aromas. Let us guide you back to something unforgettable.",
+    "button": "Return to Home"
+  },
+  "product": {
+    "notFound": {
+      "error": "FRAGRANCE NOT FOUND",
+      "title": "This scent has faded away",
+      "description": "The fragrance you are looking for is no longer available or may never have existed. Like rare perfumes, some things are meant to be fleeting. But our collection is full of extraordinary scents waiting to be discovered.",
+      "button": "Go back"
+    },
+    "reviews": "Customer Reviews",
+    "fragranceNotes": "Fragrance Notes",
+    "addToCart": "Add to Cart",
+    "relatedProducts": "You may also like"
+  },
+  "products": {
+    "searchPlaceholder": "Search fragrance...",
+    "allBrands": "All brands",
+    "sortBy": "Sort by",
+    "sortPriceAsc": "Price: Low → High",
+    "1": {
+      "title": "Velvet Oud",
+      "description": "A deep and luxurious oud fragrance blended with warm spices and smooth vanilla."
+    },
+    "2": {
+      "title": "Citrus Bloom",
+      "description": "A fresh and vibrant citrus fragrance with soft floral undertones."
+    },
+    "3": {
+      "title": "Midnight Rose",
+      "description": "A seductive floral fragrance with dark rose and warm woody accents."
+    },
+    "4": {
+      "title": "Santal Noir",
+      "description": "A rich and creamy sandalwood fragrance with smoky and spicy notes."
+    },
+    "5": {
+      "title": "Amber Sky",
+      "description": "A warm amber fragrance with soft sweetness and a touch of spice."
+    },
+    "6": {
+      "title": "White Musk",
+      "description": "A clean and soft musk fragrance with subtle floral notes."
+    },
+    "notes": {
+      "Oud": "Oud",
+      "Vanilla": "Vanilla",
+      "Amber": "Amber",
+      "Saffron": "Saffron",
+      "Bergamot": "Bergamot",
+      "Orange Blossom": "Orange Blossom",
+      "Jasmine": "Jasmine",
+      "Musk": "Musk",
+      "Rose": "Rose",
+      "Patchouli": "Patchouli",
+      "Cedarwood": "Cedarwood",
+      "Black Pepper": "Black Pepper",
+      "Sandalwood": "Sandalwood",
+      "Leather": "Leather",
+      "Cardamom": "Cardamom",
+      "Incense": "Incense",
+      "Tonka Bean": "Tonka Bean",
+      "Cinnamon": "Cinnamon",
+      "White Musk": "White Musk",
+      "Lily": "Lily",
+      "Cotton Flower": "Cotton Flower",
+      "Soft Woods": "Soft Woods"
+    },
+
+    "comments": {
+      "1": "Absolutely love this scent! Elegant and long-lasting.",
+      "2": "Nice fragrance but a bit too strong for daily wear.",
+      "3": "My favorite perfume, smells amazing and lasts all day!",
+      "4": "Not bad but the scent fades quickly.",
+      "5": "Lovely aroma, perfect for evening occasions.",
+      "6": "Excellent quality, will definitely buy again!"
+    }
+  },
+  "featured": {
+    "title": "Featured Fragrances",
+    "subtitle": "Our most loved scents, selected for you.",
+    "shopNow": "Shop Now"
+  },
+  "footer": {
+    "description": "Elevate your senses with our premium fragrances. Discover, indulge, and embrace your signature scent.",
+    "navigation": "Navigation",
+    "home": "Home",
+    "products": "Products",
+    "about": "About Us",
+    "contact": "Contact",
+    "contactTitle": "Contact",
+    "follow": "Follow Us",
+    "rights": "All rights reserved."
+  },
+  "whyChooseUs": {
+    "title": "Why Choose Us?",
+    "subtitle": "Experience the art of perfumery with our expertly crafted fragrances that delight the senses, evoke emotions, and leave a lasting impression wherever you go.",
+    "shipping": "Fast & reliable worldwide shipping ensures your favorite scents arrive safely and on time, so you can enjoy them without delay.",
+    "premium": "We use only premium ingredients and expert blending techniques to create long-lasting fragrances that stand out and make every moment memorable.",
+    "support": "Our dedicated customer support team is always ready to assist you with any questions or concerns, ensuring a smooth and enjoyable shopping experience.",
+    "imageAlt": "Perfume quality"
+  },
+  "contacts": {
+    "title": "Get in Touch with Us",
+    "subtitle": "We’d love to hear from you! Whether you have questions, feedback, or just want to share your experience, our team is always ready to assist. Fill out the form below and we’ll get back to you as soon as possible."
+  },
+  "about": {
+    "ourStory": {
+      "title": "Our Story",
+      "text": "At PERFUME, our journey began with a passion for creating fragrances that capture emotions and memories. From the first spray, our scents tell a story — whether it's a fresh morning breeze, a romantic evening, or a daring night out. Each bottle reflects our commitment to elegance, sophistication, and timeless style."
+    },
+    "ourPhilosophy": {
+      "title": "Our Philosophy",
+      "text": "We believe that perfume is not just a scent, but an experience. Our philosophy combines artisanal craftsmanship with modern aesthetics, ensuring every fragrance is unique and memorable. We source the finest ingredients from around the world and create scents that resonate with individuality and elegance. Sustainability and cruelty-free practices are at the heart of everything we do."
+    },
+    "ourMission": {
+      "title": "Our Mission",
+      "text": "Our mission is to enrich everyday life with luxury fragrances that inspire confidence and self-expression. We strive to offer a curated selection of signature perfumes, catering to diverse tastes and personalities. By focusing on quality, creativity, and innovation, PERFUME aims to become a trusted companion in every special moment."
+    }
+  }
 }

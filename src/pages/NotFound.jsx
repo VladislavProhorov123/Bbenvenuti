@@ -1,15 +1,17 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import parfume4 from '../assets/parfume4.jpg'
+import { useTranslation } from 'react-i18next'
 
 export default function NotFound() {
+  const { t } = useTranslation()
   const navigate = useNavigate()
   return (
     <section className="relative min-h-[100svh] flex items-center justify-center bg-black text-white overflow-hidden">
       {/* Background image */}
       <img
         src={parfume4}
-        alt="Lost fragrance"
+        alt={t("notFound.title")}
         className="absolute inset-0 w-full h-full object-cover brightness-50"
       />
 
@@ -19,23 +21,22 @@ export default function NotFound() {
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-xl">
         <p className="tracking-widest text-sm text-white/70 mb-4">
-          ERROR 404
+          {t("notFound.error")}
         </p>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif leading-tight">
-          This fragrance<br />could not be found
+          {t("notFound.title")}
         </h1>
 
         <p className="mt-6 text-white/80 text-sm sm:text-base">
-          The page you are looking for has vanished into the mist of rare aromas.
-          Let us guide you back to something unforgettable.
+          {t("notFound.description")}
         </p>
 
         <button
           onClick={() => navigate("/")}
           className="mt-10 px-8 py-3 rounded-full bg-[var(--brand-primary)] hover:bg-[var(--brand-accent)] text-white font-semibold transition"
         >
-          Return to Home
+          {t("notFound.button")}
         </button>
       </div>
     </section>

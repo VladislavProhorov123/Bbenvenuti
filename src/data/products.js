@@ -1,163 +1,127 @@
-import parfume13 from '../assets/parfume13.png'
-import parfume14 from '../assets/parfume14.png'
-import parfume15 from '../assets/parfume15.png'
-import parfume16 from '../assets/parfume16.png'
-import parfume17 from '../assets/parfume17.png'
-import parfume18 from '../assets/parfume18.png'
-
-
+import parfume13 from "../assets/parfume13.png";
+import parfume14 from "../assets/parfume14.png";
+import parfume15 from "../assets/parfume15.png";
+import parfume16 from "../assets/parfume16.png";
+import parfume17 from "../assets/parfume17.png";
+import parfume18 from "../assets/parfume18.png";
 
 export const products = [
   {
     id: 1,
-    title: "Velvet Oud",
+    titleKey: "products.1.title",
     brand: "Maison Élan",
     price: 120,
     ml: 100,
     rating: 4.8,
     image: parfume13,
-    description:
-      "A deep and luxurious oud fragrance blended with warm spices and smooth vanilla.",
-    notes: ["Oud", "Vanilla", "Amber", "Saffron"],
-    comments: [
-      "Very elegant and long-lasting.",
-      "Perfect for evening wear.",
-      "Smells expensive and refined."
-    ]
+    descriptionKey: "products.1.description",
+    notesKeys: ["Oud", "Vanilla", "Amber", "Saffron"],
+    commentsKeys: [1, 2, 3],
   },
-
   {
     id: 2,
-    title: "Citrus Bloom",
+    titleKey: "products.2.title",
     brand: "Aroma Vera",
     price: 95,
     ml: 75,
     rating: 4.5,
     image: parfume14,
-    description:
-      "A fresh and vibrant citrus fragrance with soft floral undertones.",
-    notes: ["Bergamot", "Orange Blossom", "Jasmine", "Musk"],
-    comments: [
-      "Very refreshing.",
-      "Perfect for summer.",
-      "Light and clean scent."
-    ]
+    descriptionKey: "products.2.description",
+    notesKeys: ["Bergamot", "Orange Blossom", "Jasmine", "Musk"],
+    commentsKeys: [4, 5, 6],
   },
-
   {
     id: 3,
-    title: "Midnight Rose",
+    titleKey: "products.3.title",
     brand: "Noir Atelier",
     price: 110,
     ml: 100,
     rating: 4.7,
     image: parfume15,
-    description:
-      "A seductive floral fragrance with dark rose and warm woody accents.",
-    notes: ["Rose", "Patchouli", "Cedarwood", "Black Pepper"],
-    comments: [
-      "Very romantic.",
-      "Perfect for date nights.",
-      "Deep and mysterious."
-    ]
+    descriptionKey: "products.3.description",
+    notesKeys: ["Rose", "Patchouli", "Cedarwood", "Black Pepper"],
+    commentsKeys: [1, 5, 6],
   },
-
   {
     id: 4,
-    title: "Santal Noir",
+    titleKey: "products.4.title",
     brand: "Maison Élan",
     price: 130,
     ml: 100,
     rating: 4.9,
     image: parfume16,
-    description:
-      "A rich and creamy sandalwood fragrance with smoky and spicy notes.",
-    notes: ["Sandalwood", "Leather", "Cardamom", "Incense"],
-    comments: [
-      "Very luxurious.",
-      "Strong and confident.",
-      "Smells niche and premium."
-    ]
+    descriptionKey: "products.4.description",
+    notesKeys: ["Sandalwood", "Leather", "Cardamom", "Incense"],
+    commentsKeys: [2, 3, 4],
   },
-
   {
     id: 5,
-    title: "Amber Sky",
+    titleKey: "products.5.title",
     brand: "Aroma Vera",
     price: 105,
     ml: 90,
     rating: 4.6,
     image: parfume17,
-    description:
-      "A warm amber fragrance with soft sweetness and a touch of spice.",
-    notes: ["Amber", "Tonka Bean", "Vanilla", "Cinnamon"],
-    comments: [
-      "Very cozy.",
-      "Perfect for autumn.",
-      "Warm and inviting."
-    ]
+    descriptionKey: "products.5.description",
+    notesKeys: ["Amber", "Tonka Bean", "Vanilla", "Cinnamon"],
+    commentsKeys: [1, 3, 5],
   },
-
   {
     id: 6,
-    title: "White Musk",
+    titleKey: "products.6.title",
     brand: "Pure Essence",
     price: 90,
     ml: 75,
     rating: 4.4,
     image: parfume18,
-    description:
-      "A clean and soft musk fragrance with subtle floral notes.",
-    notes: ["White Musk", "Lily", "Cotton Flower", "Soft Woods"],
-    comments: [
-      "Very clean scent.",
-      "Perfect for everyday use.",
-      "Soft and comforting."
-    ]
-  }
+    descriptionKey: "products.6.description",
+    notesKeys: ["White Musk", "Lily", "Cotton Flower", "Soft Woods"],
+    commentsKeys: [2, 4, 6],
+  },
 ];
 
+// Комментарии
 export const comments = [
   {
     id: 1,
     author: "Emily R.",
     avatar: "https://randomuser.me/api/portraits/women/68.jpg",
     rating: 5,
-    text: "This fragrance is absolutely stunning. It feels fresh, clean, and sophisticated at the same time. I get compliments every time I wear it, and it lasts for hours without being overpowering."
+    textKey: "products.comments.1",
   },
   {
     id: 2,
     author: "Michael T.",
     avatar: "https://randomuser.me/api/portraits/men/32.jpg",
     rating: 4,
-    text: "A very pleasant scent that works great for daily use. It is light enough for the office but still has a noticeable character. I only wish it lasted a little longer."
+    textKey: "products.comments.2",
   },
   {
     id: 3,
     author: "Sophia L.",
     avatar: "https://randomuser.me/api/portraits/women/12.jpg",
     rating: 5,
-    text: "I was looking for something fresh and elegant, and this perfume delivered exactly that. It smells clean, airy, and slightly floral — perfect for warm weather."
+    textKey: "products.comments.3",
   },
   {
     id: 4,
     author: "Daniel K.",
     avatar: "https://randomuser.me/api/portraits/men/75.jpg",
     rating: 3,
-    text: "The fragrance is nice and refreshing, but it is a bit too subtle for my taste. I prefer something more intense, but for people who like light scents, this is a good choice."
+    textKey: "products.comments.4",
   },
   {
     id: 5,
     author: "Olivia M.",
     avatar: "https://randomuser.me/api/portraits/women/45.jpg",
     rating: 4,
-    text: "Very clean and modern smell. It feels premium and well-balanced. I usually wear it during the day, and it gives me a fresh and confident feeling."
+    textKey: "products.comments.5",
   },
   {
     id: 6,
     author: "James P.",
     avatar: "https://randomuser.me/api/portraits/men/19.jpg",
     rating: 5,
-    text: "One of the best fragrances I have tried this year. It is refreshing, elegant, and long-lasting. Definitely something I would buy again and recommend to others."
-  }
+    textKey: "products.comments.6",
+  },
 ];

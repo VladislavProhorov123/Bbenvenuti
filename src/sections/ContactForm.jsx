@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import SectionTitle from "../components/SectionTitle";
+import { useTranslation } from "react-i18next";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+
+  const { t } = useTranslation();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,7 +28,7 @@ export default function ContactForm() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(payload),
-        }
+        },
       );
 
       if (!res.ok) {
@@ -35,9 +38,9 @@ export default function ContactForm() {
       setName("");
       setPhone("");
       setMessage("");
-      alert("Your message has been sent");
-    } catch (err) {
-      alert("Error sending form. Please try again.");
+      alert(t("contact.form.success"));
+    } catch {
+      alert(t("contact.form.error"));
     }
   };
 
@@ -46,14 +49,11 @@ export default function ContactForm() {
       <div className="container max-w-6xl mx-auto flex flex-col lg:flex-row gap-10 md:gap-12 items-center px-4 md:px-0">
         <div className="w-full lg:w-1/2">
           <SectionTitle
-            title="Stay Connected with Us"
-            subtitle="Join our fragrance community and get exclusive access to limited edition scents, special offers, and insider tips from our master perfumers. Sign up now to elevate your olfactory experience and never miss a new release or promotion."
+            title={t("contact.title")}
+            subtitle={t("contact.subtitle")}
           />
           <p className="mt-4 md:mt-6 text-sm md:text-base text-[var(--text-secondary)] max-w-xl mx-auto lg:mx-0">
-            By subscribing to our newsletter, you’ll receive personalized
-            recommendations, early access to new collections, and curated
-            content about the art of perfumery. Your email is safe with us – we
-            never share your information with third parties.
+            {t("contact.description")}
           </p>
         </div>
 
@@ -67,14 +67,14 @@ export default function ContactForm() {
                 htmlFor="name"
                 className="mb-1 md:mb-2 text-sm md:text-base font-medium"
               >
-                Name
+                {t("contact.form.name")}
               </label>
               <input
                 id="name"
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                placeholder="Your Name"
+                placeholder={t("contact.form.namePlaceholder")}
                 required
                 className="border border-[var(--border-color)] rounded-lg p-3 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] transition"
               />
@@ -85,14 +85,14 @@ export default function ContactForm() {
                 htmlFor="phone"
                 className="mb-1 md:mb-2 text-sm md:text-base font-medium"
               >
-                Phone
+                {t("contact.form.phone")}
               </label>
               <input
                 id="phone"
                 type="tel"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                placeholder="+1 234 567 890"
+                placeholder={t("contact.form.phonePlaceholder")}
                 required
                 className="border border-[var(--border-color)] rounded-lg p-3 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] transition"
               />
@@ -103,14 +103,14 @@ export default function ContactForm() {
                 htmlFor="message"
                 className="mb-1 md:mb-2 text-sm md:text-base font-medium"
               >
-                Comment
+                {t("contact.form.comment")}
               </label>
               <textarea
                 id="message"
                 rows={4}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder="Your message..."
+                placeholder={t("contact.form.commentPlaceholder")}
                 className="border border-[var(--border-color)] rounded-lg p-3 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] transition"
               />
             </div>
@@ -119,7 +119,7 @@ export default function ContactForm() {
               type="submit"
               className="mt-2 md:mt-4 px-6 md:px-8 py-3 rounded-full bg-[var(--brand-primary)] hover:bg-[var(--brand-accent)] text-white font-semibold transition w-full"
             >
-              Subscribe
+              {t("contact.form.submit")}
             </button>
           </form>
         </div>
