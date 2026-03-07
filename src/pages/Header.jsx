@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import LanguageSelect from "../components/LanguageSelect";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -15,7 +16,7 @@ export default function Header() {
           PERFUME
         </div>
 
-        <nav className="hidden md:flex gap-10 text-lg">
+        <nav className="hidden md:flex gap-10 text-lg items-center">
           <NavLink to="/" className={linkClass}>
             Home
           </NavLink>
@@ -28,6 +29,7 @@ export default function Header() {
           <NavLink to="/contacts" className={linkClass}>
             Contacts
           </NavLink>
+          <LanguageSelect />
         </nav>
 
         <button
@@ -52,7 +54,10 @@ export default function Header() {
         </button>
       </div>
 
-      <div className={`md:hidden overflow-hidden transition-all duration-300 ${open ? 'max-h-96' : 'max-h-0'}`}>
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ${open ? "max-h-96" : "max-h-0"}`}
+      >
+        <div className="flex justify-end"><LanguageSelect /></div>
         <nav className="flex flex-col gap-6 p-6 bg-[var(--bg-secondary)]">
           <NavLink onClick={() => setOpen(false)} to="/" className={linkClass}>
             Home
